@@ -1,0 +1,47 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "Sans", sans-serif;
+    font-weight: bold;
+}
+
+/* O balão da notificação bem mais compacto */
+.notification {
+    background-color: rgba(17, 17, 27, 0.85); 
+    border: 2px solid #24c3a2; 
+    border-radius: 8px;        /* Cantos levemente menos arredondados para combinar com o tamanho menor */
+    margin: 4px 8px;
+    padding: 6px 10px;         /* Menos espaço interno */
+    max-width: 300px;          /* Limita a largura para a caixa não ficar gigante na tela */
+}
+
+/* Título da Notificação */
+.notification-content {
+    margin: 2px;
+}
+
+.notification-default-image {
+    margin-right: 6px;
+}
+
+.summary {
+    font-size: 11px;           /* Fonte menor para o título */
+    color: #ffffff; 
+}
+
+.body {
+    font-size: 10px;           /* Fonte menor para o texto descritivo */
+    color: #cdd6f4; 
+}
+
+/* Botão de fechar (o X) menor */
+.close-button {
+    background: #f38ba8;
+    color: #11111b;
+    text-shadow: none;
+    margin: 2px;
+    padding: 1px;
+    border-radius: 100%;
+}
+
+.close-button:hover {
+    background: #eb5b83;
+}

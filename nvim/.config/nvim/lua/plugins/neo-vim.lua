@@ -1,0 +1,29 @@
+return {
+	"nvim-neo-tree/neo-tree.nvim",
+	branch = "v3.x",
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+		"nvim-tree/nvim-web-devicons",
+		"MunifTanjim/nui.nvim",
+	},
+	config = function()
+		vim.keymap.set("n", "<C-b>", ":Neotree toggle<CR>", { silent = true })
+        require("neo-tree").setup({
+            window = {
+				mappings = {
+					-- Atalho local: se estiver DENTRO do Neo-tree, Ctrl+B fecha ele
+					["<C-b>"] = "close_window",
+				}
+			},
+            event_handlers = {
+                {
+                    event = "file_opened",
+                    handler = function(file_path)
+                        require("neo-tree.command").execute({ action = "close" })
+                    end,
+                }
+            }
+        })
+
+	end,
+}

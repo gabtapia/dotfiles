@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Abre o wofi mostrando "Calculadora" no topo e esperando o input na linha de baixo
+input=$(echo -e "--- CALCULADORA ---" | wofi --show dmenu --prompt "Digitar conta..." --width 350 --height 150 --cache-file /dev/null)
+
+# Se o usuário não digitou nada, cancelou ou selecionou o título por engano
+if [ -z "$input" ] || [ "$input" = "--- CALCULADORA ---" ]; then
+    exit 0
+fi
+
+result=$(qalc -t "$input")
+
+if [ -n "$result" ]; then
+    echo -n "$result" | wl-copy
+    notify-send "Calculadora" "$input = $result" -i accessories-calculator
+fi

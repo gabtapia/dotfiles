@@ -1,0 +1,157 @@
+# ==========================================
+#  Tema Starship: Deep Purple Multi-Lang
+# ==========================================
+
+format = """
+[░▒▓](#1F172E)\
+$os\
+$username\
+[](bg:#34234E fg:#1F172E)\
+$directory\
+[](fg:#34234E bg:#6C3E9C)\
+$git_branch\
+$git_status\
+[](fg:#6C3E9C bg:#A371F7)\
+$python\
+$nodejs\
+$rust\
+$golang\
+$java\
+$c\
+$php\
+$ruby\
+$docker_context\
+$package\
+[](fg:#A371F7 bg:#241A35)\
+$cmd_duration\
+[ ](fg:#241A35)\
+$fill\
+$time\
+$line_break\
+$character
+"""
+
+add_newline = true
+
+[character]
+success_symbol = "[❯](bold #C678DD)"
+error_symbol = "[❯](bold #FF557F)"
+vimcmd_symbol = "[❮](bold #A371F7)"
+
+[os]
+disabled = false
+style = "bg:#1F172E fg:#E6DCFF"
+format = "[$symbol ]($style)"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+Macos = "󰀵"
+Arch = "󰣇"
+Fedora = "󰣛"
+Linux = "󰌽"
+
+[username]
+show_always = false
+style_user = "bg:#1F172E fg:#E6DCFF bold"
+style_root = "bg:#1F172E fg:#FF557F bold"
+format = "[$user]($style) "
+
+[directory]
+style = "bg:#34234E fg:#F1ECFF bold"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documentos" = "󱔗 "
+"Downloads" = " "
+"Músicas" = " "
+"Imagens" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:#6C3E9C fg:#FFFFFF bold"
+format = "[ $symbol $branch ]($style)"
+
+[git_status]
+style = "bg:#6C3E9C fg:#FFFFFF"
+format = "[$all_status$ahead_behind ]($style)"
+conflicted = "󰞇 "
+ahead = "⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕⇡${ahead_count}⇣${behind_count} "
+untracked = " "
+stashed = "📦 "
+modified = "󰏫 "
+staged = "󰐖 "
+renamed = "󰑕 "
+deleted = "🗑 "
+
+# --- Módulos de Linguagens & Ferramentas ---
+
+[python]
+symbol = ""
+style = "bg:#A371F7 fg:#1A1028 bold"
+format = "[ $symbol ($version )(\\($virtualenv\\) )]($style)"
+
+[nodejs]
+symbol = ""
+style = "bg:#A371F7 fg:#1A1028 bold"
+format = "[ $symbol ($version) ]($style)"
+
+[rust]
+symbol = "󱘗"
+style = "bg:#A371F7 fg:#1A1028 bold"
+format = "[ $symbol ($version) ]($style)"
+
+[golang]
+symbol = ""
+style = "bg:#A371F7 fg:#1A1028 bold"
+format = "[ $symbol ($version) ]($style)"
+
+[java]
+symbol = ""
+style = "bg:#A371F7 fg:#1A1028 bold"
+format = "[ $symbol ($version) ]($style)"
+
+[c]
+symbol = ""
+style = "bg:#A371F7 fg:#1A1028 bold"
+format = "[ $symbol ($version) ]($style)"
+
+[php]
+symbol = ""
+style = "bg:#A371F7 fg:#1A1028 bold"
+format = "[ $symbol ($version) ]($style)"
+
+[ruby]
+symbol = ""
+style = "bg:#A371F7 fg:#1A1028 bold"
+format = "[ $symbol ($version) ]($style)"
+
+[docker_context]
+symbol = ""
+style = "bg:#A371F7 fg:#1A1028 bold"
+format = "[ $symbol $context ]($style)"
+
+[package]
+symbol = "󰏗"
+style = "bg:#A371F7 fg:#1A1028"
+format = "[ $symbol $version ]($style)"
+
+# ------------------------------------------
+
+[cmd_duration]
+min_time = 2_000
+style = "bg:#241A35 fg:#FFB86C"
+format = "[ ⏱ $duration ]($style)"
+
+[fill]
+symbol = " "
+
+[time]
+disabled = false
+time_format = "%R"
+style = "fg:#705C8C"
+format = "[  $time ]($style)"
