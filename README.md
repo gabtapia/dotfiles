@@ -49,7 +49,7 @@ sudo pacman -S stow git
 Clone este repositório diretamente no seu `$HOME`:
 
 ```bash
-git clone https://github.com/SEU_USUARIO/dotfiles.git ~/dotfiles
+git clone https://github.com/gabtapia/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ```
 
