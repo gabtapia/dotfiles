@@ -34,11 +34,11 @@
     },
 
     "mpris": {
+        "player": "spotify",
         "format": "{player_icon} {title} - {artist}",
         "format-paused": "{player_icon} {title} - {artist}",
         "player-icons": {
             "spotify": "",
-            "default": ""
         },
         "max-length": 50
     },
