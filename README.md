@@ -15,6 +15,7 @@ Minhas configurações pessoais de ambiente gerenciadas de forma modular com **G
 | **Barra de Status** | [Waybar](https://github.com/Alexays/Waybar) |
 | **Lançador de Apps** | [Wofi](https://hg.sr.ht/~scoopta/wofi) |
 | **Terminal** | [Kitty](https://sw.kovidgoyal.net/kitty/) |
+| **Multiplexador** | [Tmux](https://github.com/tmux/tmux) |
 | **Editor** | [Neovim](https://neovim.io/) |
 | **Shell & Prompt** | [Zsh](https://www.zsh.org/) + [Starship](https://starship.rs/) |
 | **Notificações** | [SwayNotificationCenter](https://github.com/ErikReider/SwayNotificationCenter) |
@@ -39,7 +40,7 @@ Minhas configurações pessoais de ambiente gerenciadas de forma modular com **G
 Instale as ferramentas base e os utilitários de terminal usados nas configurações:
 
 ```bash
-sudo pacman -S stow git zsh starship fzf zoxide eza bat ripgrep fd
+sudo pacman -S stow git zsh tmux starship fzf zoxide eza bat ripgrep fd
 ```
 
 Defina o Zsh como sua shell padrão:
@@ -74,7 +75,7 @@ stow -v *
 Ou aplique apenas pacotes específicos:
 
 ```bash
-stow -v hypr waybar kitty nvim zsh backgrounds
+stow -v hypr waybar kitty nvim zsh tmux backgrounds
 ```
 
 > **Nota:** As configurações do Zsh seguem a especificação XDG (`~/.config/zsh`). O arquivo `~/.zshenv` é linkado na raiz da Home para direcionar o ZDOTDIR automaticamente, e os diretórios de cache (`~/.cache/zsh`) e histórico (`~/.local/state/zsh`) são criados automaticamente na primeira inicialização da shell.
@@ -83,5 +84,5 @@ stow -v hypr waybar kitty nvim zsh backgrounds
 
 ## Créditos & Inspirações
 
-* As configurações do **Kitty**, **Hyprlock** e do **Wofi** são inspiradas e baseadas nos dotfiles do [typecraft](https://github.com/typecraft-dev/dotfiles) (canal [typecraft](https://www.youtube.com/@typecraft_dev)).
+* As configurações do **Kitty**, **Hyprlock**, **Wofi** e **Tmux** são inspiradas e baseadas nos tutoriais do [typecraft](https://www.youtube.com/@typecraft_dev).
 * Estrutura e organização modular do **Zsh** baseadas no guia do [The Rad Lectures](https://youtu.be/1jE7rCvByHg).
