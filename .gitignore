@@ -6,3 +6,10 @@
 *.log
 *.bak
 *.orig
+
+# GTK bookmarks
+gtk-3.0/.config/gtk-3.0/bookmarks
+
+# Configurações locais / binários não monitorizados
+.luarc.json
+bin/.local/bin/dusklight
