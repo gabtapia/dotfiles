@@ -13,3 +13,6 @@ gtk-3.0/.config/gtk-3.0/bookmarks
 # Configurações locais / binários não monitorizados
 .luarc.json
 bin/.local/bin/dusklight
+
+# Plugins gerenciados pelo TPM no tmux
+tmux/.config/tmux/plugins/
