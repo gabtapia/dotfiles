@@ -31,3 +31,6 @@ vim.cmd([[
  ]])
 
 vim.keymap.set({ "n", "v", "i" }, "<C-a>", "<Esc>ggVG", { desc = "Selecionar tudo" })
+vim.keymap.set("v", "<leader>gl", function()
+	require("telescope.builtin").git_bcommits_range()
+end, { desc = "Histórico do bloco selecionado" })
