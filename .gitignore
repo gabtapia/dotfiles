@@ -16,3 +16,5 @@ bin/.local/bin/dusklight
 
 # Plugins gerenciados pelo TPM no tmux
 tmux/.config/tmux/plugins/
+
+zsh/.config/zsh/.zcompdump
