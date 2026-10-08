@@ -123,3 +123,9 @@ source "$ZDOTDIR/prompt.zsh"
 if [[ -f "$ZDOTDIR/local.zsh" ]]; then
   source "$ZDOTDIR/local.zsh"
 fi
+
+# Ativar o NVM (Node Version Manager)
+export PATH=~/.npm-global/bin:$PATH
+
+# Limpar terminal
+alias clear="printf '\033[2J\033[3J\033[1;1H'"
